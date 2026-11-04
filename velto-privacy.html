@@ -71,8 +71,8 @@
 <body>
   <main>
     <h1>Velto — Privacy Policy</h1>
-    <p class="updated">Last updated 20 October 2026</p>
-    <p class="lede">Velto is a PDF reader and editor that works entirely on your phone. It has no account to create, no server to sign in to, and no analytics of its own. It shows one advert, at the foot of the reading screen, and that is the only part of the app that involves anyone else. This policy explains, in plain terms, what the app touches and what it does not.</p>
+    <p class="updated">Last updated 4 November 2026</p>
+    <p class="lede">Velto is a PDF reader and editor, with a document and spreadsheet editor and a presentation viewer, that works entirely on your phone. It has no account to create, no server to sign in to, and no analytics of its own. It shows one advert, at the foot of the reading screen, and that is the only part of the app that involves anyone else. This policy explains, in plain terms, what the app touches and what it does not.</p>
     <h2>The short version</h2>
     <p>Your documents are opened, read and edited on your device and are never uploaded anywhere. Velto itself collects no personal data.</p>
     <p>There is no account and no login.</p>
@@ -81,7 +81,7 @@
     <p>We do not collect any of the following, at all:</p>
     <ul>
       <li>Your name, email address, phone number or any other contact detail.</li>
-      <li>The contents, names, locations or page counts of your PDFs.</li>
+      <li>The contents, names, locations or page counts of your PDFs, documents or spreadsheets.</li>
       <li>Photographs or scans you make with the app.</li>
       <li>Your precise location. (The advertising software estimates a rough location from your IP address — see Advertising.)</li>
       <li>Your contacts, calendar, messages or call history.</li>
@@ -96,15 +96,18 @@
       <li>Highlights, drawings, notes, typed text and your saved signature.</li>
       <li>Your display and reading preferences.</li>
       <li>If you set up the app lock, your PIN is stored only as a salted cryptographic hash. The PIN itself is never written down, and the hash cannot be turned back into it.</li>
-      <li>When another app hands Velto a PDF to open — from WhatsApp or email, for example — Velto keeps a copy in the Documents/Velto/Received folder on your phone, so you can find it again later. It stays on your phone, is never uploaded, and you can delete it like any other file. If that folder cannot be written, the copy goes to a temporary folder instead and is cleared automatically after a few days.</li>
+      <li>When another app hands Velto a PDF, document or spreadsheet to open — from WhatsApp or email, for example — Velto keeps a copy in the Documents/Velto/Received folder on your phone, so you can find it again later. It stays on your phone, is never uploaded, and you can delete it like any other file. If that folder cannot be written, the copy goes to a temporary folder instead and is cleared automatically after a few days.</li>
     </ul>
     <h2>Permissions, and exactly why each one exists</h2>
     <ul>
-      <li>All files access — so Velto can find and list the PDFs already on your phone and show them as a library. It is requested only when you open the Files screen and ask for it, it is used to read and list documents, and the app falls back to the system file picker if you refuse. Velto never writes outside its own folders and the folder you choose to save into.</li>
+      <li>All files access — so Velto can find and list the PDFs, documents and spreadsheets already on your phone and show them as a library. It is requested only when you open the Files screen and ask for it, it is used to read and list documents, and the app falls back to the system file picker if you refuse. Velto writes only to its own folders, the folder you choose to save into, and a document or spreadsheet you edit and then save, which is saved back where it came from.</li>
       <li>Biometrics — only to unlock the app, or an individual PDF, if you have switched the app lock on. Fingerprint and face data stay inside your phone’s secure hardware; the app never sees them.</li>
-      <li>Camera — Velto does not hold the camera permission. When you use the Scan tool, Google Play services opens its own scanner screen and hands the finished pages back to the app. The photographs stay on your device.</li>
+      <li>Camera — Velto does not hold the camera permission. When you use the Scan tool, Google Play services opens its own scanner screen and hands the finished pages back to the app. When you add a photo to a document, your phone’s camera app takes it and hands it back. The photographs stay on your device.</li>
       <li>Internet — used for one thing only: the first time you use the Scan tool, Google Play services downloads the on-device scanning model. No document, page, filename or any other content of yours is ever transmitted.</li>
     </ul>
+    <h2>Documents, spreadsheets and presentations</h2>
+    <p>Documents (.docx, .doc, .rtf and .txt) and spreadsheets (.xlsx, .xls and .csv) are opened, edited, calculated and saved on your phone. Presentations (.pptx and .ppt) are opened for reading. Nothing in them is uploaded.</p>
+    <p>To show a file’s pages as they really look, or to save it as a PDF, the pages are laid out by the web engine built into your phone, working offline, from a temporary copy in Velto’s private storage that is deleted straight afterwards. Nothing is loaded from the internet and nothing is sent anywhere.</p>
     <h2>Text recognition and scanning</h2>
     <p>Reading the text out of a scan, and detecting the edges of a page, are done by Google’s ML Kit running on your device. The images are processed locally and are not uploaded. The first use may download the recognition model from Google Play services; this transfers the model to your phone and sends none of your content in return.</p>
     <h2>Reading aloud</h2>
@@ -113,6 +116,8 @@
     <p>A PDF can contain a web link. Velto always shows you the full address and asks before opening anything, and will only open ordinary web, email and telephone links. Once you choose to open one, it is handled by another app on your phone and this policy no longer applies to it.</p>
     <h2>Sharing and saving</h2>
     <p>When you tap Share, Android’s own share sheet appears and you choose where the file goes. When you save, the file is written to a folder on your own phone. Velto has no cloud storage and no upload path of any kind.</p>
+    <h2>Your default apps</h2>
+    <p>To show whether Velto is the app your phone opens PDFs, documents, spreadsheets and presentations with, Velto asks Android which app that is for each kind of file. Only apps that open those files are visible to this check. The answer is used on the spot to show the setting, and is never stored or sent anywhere. Only you can change your default apps, in Android’s own “Open with” dialog or settings.</p>
     <h2>Advertising</h2>
     <p>One banner advert is shown along the bottom of the reading screen. It is supplied by Google AdMob, and it is the only feature in Velto that involves a company other than you and your phone.</p>
     <p>To show the advert, the Google Mobile Ads software inside Velto automatically collects the following and shares it with Google, for advertising, analytics and fraud prevention. It is sent encrypted:</p>
