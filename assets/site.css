@@ -158,6 +158,13 @@ ul { margin: 0; padding: 0; list-style: none; }
 .arrow { width: 16px; height: 16px; fill: none; stroke: currentColor; stroke-width: 1.8; stroke-linecap: round; stroke-linejoin: round; transition: transform 0.25s var(--ease-out); }
 .btn:hover .arrow { transform: translateX(3px); }
 
+/* Official Google Play badge. The PNG has Google's required clear space
+   built in, so the negative margin lines its visible edge up with buttons. */
+.play-badge { display: inline-block; line-height: 0; margin: -12px -12px -12px -12px; border-radius: 14px; transition: transform 0.2s var(--ease-out); }
+.play-badge img { height: 72px; width: auto; }
+.play-badge:hover { transform: translateY(-2px); }
+.play-badge:active { transform: scale(0.97); }
+
 .text-link {
   font-size: 15px; font-weight: 560; color: var(--ink-2);
   text-decoration: underline; text-decoration-color: var(--line-2); text-underline-offset: 4px;
