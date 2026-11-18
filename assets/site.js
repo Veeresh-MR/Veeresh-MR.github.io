@@ -94,9 +94,9 @@
     const heroScene = document.querySelector('.hero .scene');
     if (hero && heroScene) addTilt(hero, heroScene, { restX: 10, restY: -16, rangeX: 9, rangeY: 18 });
 
-    document.querySelectorAll('.app').forEach((card) => {
-      const scene = card.querySelector('.mini-scene');
-      if (scene) addTilt(card, scene, { restX: 12, restY: -26, rangeX: 14, rangeY: 26 });
+    document.querySelectorAll('.app, [data-tilt]').forEach((area) => {
+      const scene = area.querySelector('.mini-scene');
+      if (scene) addTilt(area, scene, { restX: 12, restY: -26, rangeX: 14, rangeY: 26 });
     });
   }
 
