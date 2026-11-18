@@ -324,18 +324,8 @@ ul { margin: 0; padding: 0; list-style: none; }
 .status--live .dot { background: var(--live); box-shadow: 0 0 0 4px color-mix(in srgb, var(--live) 18%, transparent); }
 .status--soon .dot { background: var(--soon); }
 
-/* Card visual links to the app page; two screenshots peek out behind the tile. */
-.app-visual { overflow: hidden; text-decoration: none; }
-.peek {
-  position: absolute; width: clamp(96px, 11vw, 132px); height: auto; border-radius: 16px;
-  border: 4px solid #121212; box-shadow: 0 24px 40px -24px var(--drop);
-  transition: transform 0.6s var(--ease-out);
-}
-.peek--1 { right: 12%; top: 14%; transform: rotate(9deg); }
-.peek--2 { left: 12%; bottom: -12%; transform: rotate(-11deg); }
-.app:hover .peek--1 { transform: rotate(12deg) translateY(-6px); }
-.app:hover .peek--2 { transform: rotate(-14deg) translateY(-6px); }
-.app-visual .mini-stage { position: relative; z-index: 1; }
+/* The card's logo links to the app page. */
+.app-visual { text-decoration: none; }
 .app h3 a { text-decoration: none; }
 .app h3 a:hover { text-decoration: underline; text-decoration-thickness: 2px; text-underline-offset: 6px; text-decoration-color: var(--accent-app); }
 .btn-sm { min-height: 44px; padding: 0 18px; font-size: 15px; }
@@ -393,40 +383,22 @@ ul { margin: 0; padding: 0; list-style: none; }
 .back-link { display: inline-flex; align-items: center; gap: 8px; padding: 8px 0; font-size: 15px; font-weight: 600; color: var(--ink-3); text-decoration: none; }
 .back-link:hover { color: var(--ink); }
 .back-link:hover .arrow { transform: translateX(-3px); }
-.app-id { display: flex; align-items: center; gap: clamp(18px, 3vw, 32px); margin-top: 18px; }
-.hero-icon { width: auto; height: auto; flex: none; }
-.hero-icon .mini-scene, .hero-icon .tile--solo { width: 128px; height: 128px; --s: 128px; }
-.app-id h1 { margin-top: 12px; font-size: clamp(40px, 6vw, 76px); }
+.app-id { margin-top: 18px; }
+.app-id h1 { margin-top: 14px; font-size: clamp(42px, 6.4vw, 84px); }
 .app-native { margin-top: 8px; font-size: 18px; font-weight: 600; color: var(--ink-2); }
 :lang(kn) { font-family: "Noto Sans Kannada", "Nirmala UI", "Tunga", system-ui, sans-serif; letter-spacing: 0; }
 .app-hero .lede { margin-top: 24px; }
 .chips { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 22px; }
 .chips li { padding: 6px 14px; border-radius: 999px; border: 1px solid var(--line-2); background: var(--surface); font-size: 14px; font-weight: 600; color: var(--ink-2); }
 
-.phone-fan { position: relative; height: clamp(420px, 48vw, 600px); }
-.phone {
-  position: absolute; margin: 0; width: clamp(190px, 19vw, 260px); aspect-ratio: 9 / 16;
-  padding: 7px; border-radius: 34px; background: #0d0d0d;
-  box-shadow: 0 1px 0 rgba(255, 255, 255, 0.08) inset, 0 50px 90px -40px var(--drop);
-}
-.phone img { width: 100%; height: 100%; object-fit: cover; border-radius: 28px; }
-.phone--back { right: 4%; top: 2%; transform: rotate(8deg); }
-.phone--front { left: 6%; top: 10%; transform: rotate(-5deg); }
-.js .phone-fan .phone { transition: transform 1.2s var(--ease-out); }
-.js .phone-fan:not(.is-in) .phone--back { transform: rotate(0deg) translateY(30px); }
-.js .phone-fan:not(.is-in) .phone--front { transform: rotate(0deg) translateY(50px); }
 
-.section--tight { padding-block: clamp(40px, 5vw, 72px); }
+/* The app's logo, large, floating in its own glow. */
+.app-hero-visual { display: grid; place-items: center; min-height: clamp(300px, 36vw, 440px); background: radial-gradient(50% 50% at 50% 50%, var(--glow-app), transparent 72%); }
+.app-hero-visual .mini-scene, .app-hero-visual .tile--solo { width: clamp(180px, 22vw, 260px); height: clamp(180px, 22vw, 260px); --s: clamp(180px, 22vw, 260px); }
+.js .app-hero-visual .enter { opacity: 0; transform: translateZ(-140px) rotateY(-55deg) rotateX(18deg); }
+.js .app-hero-visual.is-in .enter { opacity: 1; transform: none; transition: transform 1.4s var(--ease-out) 0.1s, opacity 0.8s ease 0.1s; }
 .section--alt { background: var(--bg-2); border-block: 1px solid var(--line); }
 
-.shots {
-  display: flex; gap: 18px; overflow-x: auto; scroll-snap-type: x mandatory; overscroll-behavior-x: contain;
-  margin-inline: calc(var(--gutter) * -1); padding: 6px var(--gutter) 22px; scrollbar-width: thin;
-}
-.shots li { flex: 0 0 clamp(170px, 20vw, 236px); scroll-snap-align: start; }
-.shots a { display: block; border-radius: 26px; overflow: hidden; border: 1px solid var(--line); background: var(--surface); box-shadow: var(--card-shadow); transition: transform 0.25s var(--ease-out); }
-.shots a:hover { transform: translateY(-4px); }
-.shots img { width: 100%; height: auto; aspect-ratio: 9 / 16; object-fit: cover; }
 
 .features { display: grid; grid-template-columns: repeat(auto-fill, minmax(min(100%, 320px), 1fr)); gap: clamp(16px, 2vw, 24px); }
 .feature { padding: clamp(22px, 3vw, 32px); background: var(--surface); border: 1px solid var(--line); border-radius: var(--radius); box-shadow: var(--card-shadow); }
@@ -471,8 +443,7 @@ ul { margin: 0; padding: 0; list-style: none; }
   .footer-grid { grid-template-columns: 1fr 1fr; }
   .footer-brand { grid-column: 1 / -1; }
   .app-hero-grid { grid-template-columns: 1fr; }
-  .phone-fan { height: clamp(380px, 92vw, 520px); max-width: 520px; width: 100%; margin-inline: auto; }
-  .phone { width: clamp(170px, 42vw, 240px); }
+  .app-hero-visual { order: -1; min-height: 260px; }
 }
 
 @media (max-width: 560px) {
@@ -487,9 +458,6 @@ ul { margin: 0; padding: 0; list-style: none; }
   .app-visual { min-height: 230px; }
   .contact-buttons .btn { flex: 1 1 auto; }
   .footer-grid { grid-template-columns: 1fr; }
-  .hero-icon .mini-scene, .hero-icon .tile--solo { width: 96px; height: 96px; --s: 96px; }
-  .app-id { align-items: flex-start; }
-  .peek { width: 84px; }
 }
 
 @media (max-width: 480px) {
@@ -505,7 +473,6 @@ ul { margin: 0; padding: 0; list-style: none; }
 @media (prefers-reduced-motion: reduce) {
   html { scroll-behavior: auto; }
   *, *::before, *::after { animation: none !important; transition: none !important; }
-  .js [data-reveal], .js .stage .enter, .js .app .enter { opacity: 1 !important; transform: none !important; }
-  .js .phone-fan:not(.is-in) .phone--back { transform: rotate(8deg); }
-  .js .phone-fan:not(.is-in) .phone--front { transform: rotate(-5deg); }
+  .js [data-reveal], .js .stage .enter, .js .app .enter, .js .app-hero-visual .enter { opacity: 1 !important; transform: none !important; }
+
 }
